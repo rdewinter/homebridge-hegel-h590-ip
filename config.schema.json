@@ -1,0 +1,54 @@
+{
+  "pluginAlias": "HegelH590IP",
+  "pluginType": "platform",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Accessory name",
+        "type": "string",
+        "default": "Hegel H590"
+      },
+      "host": {
+        "title": "H590 IP address / hostname",
+        "type": "string"
+      },
+      "port": {
+        "title": "TCP port",
+        "type": "integer",
+        "default": 50001
+      },
+      "inputUsbCommand": {
+        "title": "Command for USB input",
+        "type": "string",
+        "default": "input set usb"
+      },
+      "inputOptical3Command": {
+        "title": "Command for OPTICAL3 input",
+        "type": "string",
+        "default": "input set optical3"
+      },
+      "powerOnCommand": {
+        "title": "Command for power on",
+        "type": "string",
+        "default": "power on"
+      },
+      "powerOffCommand": {
+        "title": "Command for power off",
+        "type": "string",
+        "default": "power off"
+      },
+      "debug": {
+        "title": "Debug logging",
+        "type": "boolean",
+        "default": false
+      },
+      "timeoutMs": {
+        "title": "TCP command timeout (ms)",
+        "type": "integer",
+        "default": 1500
+      }
+    },
+    "required": ["host"]
+  }
+}
