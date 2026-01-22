@@ -10,6 +10,21 @@
     "type": "git",
     "url": "git+https://github.com/rdewinter/homebridge-hegel-h590-ip.git"
   },
+  "homebridge": {
+    "platforms": [
+      {
+        "platform": "HegelH590IP",
+        "name": "Hegel H590",
+        "host": "192.168.1.100",
+        "port": 50001,
+        "debug": true,
+        "powerOnCommand": "-p.1",
+        "powerOffCommand": "-p.0",
+        "inputOptical3Command": "-i.10",
+        "inputUsbCommand": "-i.11",
+      }
+    ]
+  },
   "scripts": {
     "build": "npx tsc -p tsconfig.json",
     "watch": "npx tsc -w -p tsconfig.json"
@@ -34,12 +49,5 @@
     "@types/node": "^20.11.30",
     "homebridge": "^1.8.0",
     "typescript": "^5.9.3"
-  },
-  "homebridge": {
-    "platforms": [
-      {
-        "platform": "HegelH590IP"
-      }
-    ]
   }
 }
