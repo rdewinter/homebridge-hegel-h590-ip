@@ -4,6 +4,12 @@
   "description": "Homebridge plugin to control Hegel H590 via IP (power + OPTICAL3/USB input only)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "license": "MIT",
+  "author": "Robin de Winter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdewinter/homebridge-hegel-h590-ip.git"
+  },
   "scripts": {
     "build": "npx tsc -p tsconfig.json",
     "watch": "npx tsc -w -p tsconfig.json"
@@ -19,8 +25,11 @@
     "node": ">=18.0.0",
     "homebridge": ">=1.6.0"
   },
-  "author": "",
-  "license": "MIT",
+    "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepare": "npm run build"
+  },
   "devDependencies": {
     "@types/node": "^20.11.30",
     "homebridge": "^1.8.0",
